@@ -1,0 +1,225 @@
+
+/*
+CSS
+THEME: Amicably
+Website: Kahone Concept
+Date: 2022
+Author: Benjamin Orrvick  */
+
+
+/* used for testing  */
+/* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+}   */
+
+/* when menu is click there is nice scroll effect */
+html {
+  scroll-behavior: smooth;
+}
+  
+/* BEGIN NAV BAR */
+/* changes color of navbar toggle switch */
+/* 56px is a good header height and is used a lot in making sure items dont go under header */
+header{
+  height: 56px;
+} 
+
+.navbar-toggler{
+  background-color: #FAC113;
+}
+
+/* so there is a background on mobile and toggle is clicked but there hasnt been any scrolling */
+@media(max-width:767px){
+  .navbar-collapse{
+  background-color: #FAC113 !important;
+  border-radius: 5px;
+  padding: 5px;
+  }
+  }
+
+.navbar-text{
+  font-family: 'Calistoga', cursive;
+  text-transform: uppercase;
+  color: #7F491E !important;
+  font-size: 1.5em;
+}
+
+.navbar-text:hover{
+  color: #b8d3ed !important;
+  transition: all 0.5s;
+}
+/* change color of background on scroll */
+#mainNav.scrolled {
+  background-color: #FAC113 !important;
+  transition: background-color 200ms linear;
+}
+/* END NAV BAR */
+
+/* BEGIN BODY */
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  object-fit: center;
+  z-index: -1000;
+  right: 0;
+  bottom: 0;
+  min-width: 100vh; 
+  min-height: 100vh;
+}
+
+/* LIVE SECTION */
+.live > h3 , .live >h4 {
+  color: #b8d3ed !important;
+}
+
+.live>p{
+  color: #7F491E !important;
+  font-family: 'Stoke', serif;
+}
+
+.custom-section{
+  padding-top: 10em;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: 'Calistoga', cursive;
+  color: #FAC113 !important;
+}
+
+.button-custom{
+  background-color: #FAC113;
+  font-family: 'Stoke', serif;
+  color: #7F491E;
+}
+
+.bg-yellow {
+  background-color: #FAC113;
+}
+
+/* BIO SECTION */
+.bio-bg-img{
+  background-image:url('../assets/img/Bio_Banner.png');
+  background-size: cover;
+  background-position: 80% center;
+  font-family: 'Stoke', serif;
+  width: 100vw;
+  height: 60em;
+  color: #b8d3ed;
+}
+
+
+/* so there is a background on mobile and toggle is clicked but there hasnt been any scrolling */
+@media(max-width:530px){
+  .bio-bg-img{
+
+    font-size: .6em;
+  }
+}
+
+
+/* CONTACT SECTION */
+.contact-bg-img{
+  background-image:url('../assets/img/Contact_Banner.png');
+  background-size: cover;
+  background-position: center center;
+
+  font-family: 'Stoke', serif;
+  width: 100vw;
+  height: 60em;
+  color: #b8d3ed;
+}
+
+.small-text{
+    font-family: 'Stoke', serif;
+    color: #7f4a1e;
+}
+
+/* makes all images animated on hover */
+img {
+  border-radius: 10px;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  }
+  
+img:hover {
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -o-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  transform: scale(1.04);
+}
+
+/* DIVIDERS */
+.divider-custom-container {
+  margin: 1.25rem 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider-custom-container .divider-custom{
+  width: 100%;
+  max-width: 7rem;
+  height: 0.25rem;
+  background-color: #FAC113;
+  border-radius: 1rem;
+}
+
+/* LANDING SECTION */
+#landing>div>h3{
+  font-family: 'Calistoga', cursive;
+  font-size: 2em;
+  color: #b8d3ed !important;
+}
+
+/* spin logo */
+
+.mainLogo{
+  /* margin:auto; */
+  height: 14em;
+  width: 100%;
+}
+
+.mainLogo:hover{
+  -webkit-animation: spin 5s infinite;
+   animation: spin 5s infinite;
+}
+
+@-webkit-keyframes spin{
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(-360deg);
+  }
+}
+
+@keyframes spin{
+  from {
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  
+  to {
+    -moz-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    transform: rotateY(-360deg);
+  }
+}
+
+/* FOOTER SECTION */
+.footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #7f4a1ea2;
+  color: #fff;
+}
+
+.copyright {
+  background-color: #7f4a1ece;
+}
