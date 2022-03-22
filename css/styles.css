@@ -69,6 +69,28 @@ header{
   min-height: 100vh;
 }
 
+.small-text{
+  font-family: 'Stoke', serif;
+  color: #7f4a1e;
+}
+
+/* makes all images animated on hover */
+img {
+  border-radius: 10px;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  }
+  
+img:hover {
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -o-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  transform: scale(1.04);
+}
+/* END BODY */
+
 /* LIVE SECTION */
 .live > h3 , .live >h4 {
   color: #b8d3ed !important;
@@ -97,6 +119,7 @@ h1,h2,h3,h4,h5{
 .bg-yellow {
   background-color: #FAC113;
 }
+/* END LIVE SECTION */
 
 /* BIO SECTION */
 .bio-bg-img{
@@ -109,7 +132,6 @@ h1,h2,h3,h4,h5{
   color: #b8d3ed;
 }
 
-
 /* so there is a background on mobile and toggle is clicked but there hasnt been any scrolling */
 @media(max-width:530px){
   .bio-bg-img{
@@ -118,56 +140,7 @@ h1,h2,h3,h4,h5{
   }
 }
 
-
-/* CONTACT SECTION */
-.contact-bg-img{
-  background-image:url('../assets/img/Contact_Banner.png');
-  background-size: cover;
-  background-position: center center;
-
-  font-family: 'Stoke', serif;
-  width: 100vw;
-  height: 60em;
-  color: #b8d3ed;
-}
-
-.small-text{
-    font-family: 'Stoke', serif;
-    color: #7f4a1e;
-}
-
-/* makes all images animated on hover */
-img {
-  border-radius: 10px;
-  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  }
-  
-img:hover {
-  -webkit-transform: scale(1.04);
-  -moz-transform: scale(1.04);
-  -o-transform: scale(1.04);
-  -ms-transform: scale(1.04);
-  transform: scale(1.04);
-}
-
-/* DIVIDERS */
-.divider-custom-container {
-  margin: 1.25rem 0 1.5rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.divider-custom-container .divider-custom{
-  width: 100%;
-  max-width: 7rem;
-  height: 0.25rem;
-  background-color: #FAC113;
-  border-radius: 1rem;
-}
+/* End BIO SECTION */
 
 /* LANDING SECTION */
 #landing>div>h3{
@@ -212,6 +185,26 @@ img:hover {
   }
 }
 
+/* END LANDING SECTION */
+
+/* DIVIDERS */
+.divider-custom-container {
+  margin: 1.25rem 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider-custom-container .divider-custom{
+  width: 100%;
+  max-width: 7rem;
+  height: 0.25rem;
+  background-color: #FAC113;
+  border-radius: 1rem;
+}
+/* END DIVIDERS */
+
 /* FOOTER SECTION */
 .footer {
   padding-top: 5rem;
@@ -223,3 +216,55 @@ img:hover {
 .copyright {
   background-color: #7f4a1ece;
 }
+/* END FOOTER SECTION */
+
+/* CONTACT SECTION */
+.contact-bg-img{
+  background-image:url('../assets/img/Contact_Banner.png');
+  background-size: cover;
+  background-position: center center;
+
+  font-family: 'Stoke', serif;
+  width: 100vw;
+  height: 60em;
+  color: #b8d3ed;
+}
+
+.formControl label i{
+  display:none;
+  padding: 5px;
+  visibility: hidden;
+}
+
+.formControl small{
+  font-family: Raleway, sans-serif;
+  display: block;
+  text-align: center;
+  visibility: hidden;
+  padding-bottom: 5px;
+}
+.formControl.error small{
+  visibility: visible !important;
+  color: #e74c3c !important;
+}
+
+.formControl.success input {
+  border: 2px solid #2ecc71 ;
+}
+
+.formControl.success label i.fa-check-circle{
+  display:inline-block;
+  visibility: visible;
+  color: #2ecc71 ;
+}
+
+.formControl.error input {
+  border: 2px solid #e74c3c !important;
+}
+.formControl.error label i.fa-exclamation-circle{
+  display:inline-block;
+  visibility: visible;
+  color: #e74c3c ;
+}
+
+/* END CONTACT SECTION */

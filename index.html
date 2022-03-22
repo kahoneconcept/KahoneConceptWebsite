@@ -5,16 +5,13 @@
     Author: Benjamin Orrvick
     Date:2022
  -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
     <meta property=’og:title’ content='TITLE OF YOUR WEBSITE' />
-    <meta property=’og:image’ content='https://ibb.co/n7C7kFD’/>
+    <meta property=’og:image’ content='https://ibb.co/n7C7kFD’ />
     <meta property=’og:url’ content="www.kahoneconcept.com" />
     <meta property=' og:image:width' content='1200' />
     <meta property='og:image:height' content='627' />
@@ -35,6 +32,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Stoke&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics kahoneconcept.com-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186891660-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-186891660-1');
+    </script>
     <!--CSS-->
     <link href="css/styles.css" rel="stylesheet" />
 </head>
@@ -56,12 +62,11 @@
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav ml-auto">
-                        <a class="nav-item nav-link navbar-text" href="#music">Music</a>
-                        <a class="nav-item nav-link navbar-text" href="#live">Live</a>
-                        <a class="nav-item nav-link navbar-text" href="#bio">Bio</a>
-                        <a class="nav-item nav-link navbar-text" href="#contact">Contact</a>
-                        <a class="nav-item nav-link navbar-text"
-                            href="https://link.kahoneconcept.com/socials">Socials</a>
+                        <a class="nav-link navbar-text" href="#music">Music</a>
+                        <a class="nav-link navbar-text" href="#live">Live</a>
+                        <a class="nav-link navbar-text" href="#bio">Bio</a>
+                        <a class="nav-link navbar-text" href="#contact">Contact</a>
+                        <a class="nav-link navbar-text" href="https://link.kahoneconcept.com/socials">Socials</a>
                     </div>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
@@ -237,44 +242,54 @@
                     <div><img src="assets/img/kc_icon.svg" alt="icon" height="30" width="30" /></div>
                     <div class="divider-custom"></div>
                 </div>
-                <!-- Contact Section Form-->
-                <div class="row justify-content-center mt-5">
-                    <div class="col-lg-8 col-xl-7">
-                        <form action="https://formsubmit.co/kahoneconceptmgmt@gmail.com" method="POST">
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..."
-                                    required />
-                                <label for="name">Full Name</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" name="email"
-                                    placeholder="name@example.com" required />
-                                <label for="name">Email Address</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="hidden" name="_subject" value="New Message!">
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text"
-                                    placeholder="Enter your message here..." style="height: 10rem"
-                                    data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
-                                </div>
-                            </div>
-                            <button class="btn btn-warning button-custom" type="submit">Send</button>
-                        </form>
 
+                <!-- form spree allows 50 free contats so maybe switch to free form -->
+                <!-- Contact Section Form-->
+                <div class="row justify-content-center text-center mt-5">
+                    <div class="col-lg-8 col-xl-7 ">
+                        <form id="form" action="https://formsubmit.co/kahoneconcept@gmail.com" method="POST">
+                            <div class="formControl form-floating mb-3">
+                                <!-- i put breaks to separate the lines -->
+                                <label for="fullName">Name<br>
+                                    <input title="Name" type="text" placeholder="Enter your name..." id="fullName"
+                                        name="Name" class="form-control">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </label>
+                                <small>Error Message</small>
+                            </div>
+                            <div class="formControl form-floating mb-3">
+                                <!-- i put breaks to separate the lines -->
+                                <label for="email">E-Mail<br>
+                                    <input title="E-mail" type="email" placeholder="name@example.com" id="email"
+                                        name="Email" class="form-control">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </label>
+                                <small>Error Message</small>
+                            </div>
                         </form>
+                        <div class="formControl form-floating mb-3">
+                            <label for="message">Message<br>
+                                <textarea class="form-control" name="Message" title="Message" form="form"
+                                    placeholder="Enter you message here..." id="message"
+                                    style="height: 10rem"></textarea>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle "></i>
+                            </label>
+                            <small for="message">Error Message</small>
+                        </div>
+                        <div class="submitDiv">
+                            <button form="form" type="submit" class="btn btn-warning button-custom">Send</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- END CONTENT SECTION -->
+        <!-- END CONTACT SECTION -->
     </div>
-    <!-- end body div -->
-    <!-- Footer-->
+    <!-- END BODY DIV -->
+    <!-- FOOTER-->
     <footer class="footer text-center">
         <div class="container">
             <div class="row justify-content-center">
@@ -321,7 +336,7 @@
                                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
                                         name="b_e21a9dfef82692adc7bacf881_391c73c347" tabindex="-1" value=""></div>
                                 <div class="clear foot col-auto">
-                                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                                    <input value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
                                         class="btn btn-warning button-custom">
                                 </div>
                             </form>
@@ -332,6 +347,7 @@
             </div>
         </div>
     </footer>
+    <!-- END FOOTER -->
     <!-- Copyright Section-->
     <div class="copyright py-4 text-center text-white">
         <div class="container"><small>Copyright &copy; Kahone Concept 2022</small></div>
