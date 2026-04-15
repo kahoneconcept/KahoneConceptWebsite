@@ -284,3 +284,58 @@ h5 {
 }
 
 /* END CONTACT SECTION */
+
+/* LANDING HERO */
+.landing-hero {
+  max-width: 340px;
+}
+
+.landing-album {
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+/* END LANDING HERO */
+
+/* MAILING LIST MODAL */
+.mailing-modal-content {
+  background-color: #7f4a1e;
+  border: 2px solid #FAC113;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.mailing-modal-content .modal-title {
+  color: #FAC113 !important;
+}
+
+.mailing-modal-close {
+  color: #FAC113;
+  opacity: 1;
+}
+
+.mailing-modal-sub {
+  color: #b8d3ed;
+  font-family: 'Stoke', serif;
+  font-size: 0.9rem;
+}
+
+.mailing-modal-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #FAC113;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+}
+
+.mailing-modal-input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.mailing-modal-input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-color: #FAC113;
+  box-shadow: 0 0 0 0.2rem rgba(250, 193, 19, 0.35);
+  outline: none;
+}
+/* END MAILING LIST MODAL */

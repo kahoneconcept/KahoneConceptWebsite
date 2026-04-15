@@ -104,7 +104,6 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
 <!-- single page website so this is to get back to the top -->
 
 <body id="page-top">
-        <script async data-uid="7d8ea78606" src="https://kahoneconcept.kit.com/7d8ea78606/index.js"></script>
     <!-- background video  across entire screen and vh-->
     <video autoplay muted loop playsinline poster="assets/img/kc_background_backup.jpg" id="myVideo">
         <source src="assets/mov/kc_website_background.mp4" type="video/mp4">
@@ -138,16 +137,14 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
     <!-- LANDING SECTION-->
     <section class="custom-section" id="landing">
         <div class="container text-center">
-                    <div class="col-md-12 col-lg-12 mb-5">
-                        <h1 class="text-center text-uppercase mb-5">The Greatest Hits</h1>
-                        <div class="mx-auto text-center">
-                            <a href="https://link.kahoneconcept.com/TGH"><img class="img-fluid" src="assets/img/music/GREATEST_HITS-KAHONE.jpg"
-                                    alt="The Greatest Hits" /></a>
-                        </div>
-                    </div>
-            <br>
+            <div class="landing-hero mx-auto">
+                <h1 class="text-center text-uppercase mb-4">The Greatest Hits</h1>
+                <a href="https://link.kahoneconcept.com/TGH">
+                    <img class="img-fluid landing-album" src="assets/img/music/GREATEST_HITS-KAHONE.jpg" alt="The Greatest Hits" />
+                </a>
+                <p class="mt-3"><a href="https://link.kahoneconcept.com/TGH" class="btn btn-warning button-custom" rel="noopener noreferrer">Stream Now</a></p>
+            </div>
         </div>
-        <br>
     </section>
     <!-- END LANDING -->
     <div class="bodyContent mt-5">
@@ -411,32 +408,9 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
                 <div class="col-auto">
                     <div class="">
                         <h4 class="text-uppercase mb-4">Join Mailing List</h4>
-                        <!-- Begin ConvertKit Signup Form -->
-                        <div id="mc_embed_signup">
-                            <form
-                                action="https://app.kit.com/forms/5090078/subscriptions"
-                                method="post"
-                                id="mc-embedded-subscribe-form"
-                                name="mc-embedded-subscribe-form"
-                                class="validate"
-                                target="_blank"
-                                novalidate
-                                data-sv-form="5090078"
-                                data-uid="7d8ea78606">
-                            
-                                <div class="mc-field-group form-floating mb-3">
-                                    <label for="mce-EMAIL">Email Address
-                                    </label>
-                                    <input type="email" value="" name="email_address" class="email form-control" id="mce-EMAIL" required>
-                                </div>
-                            
-                                <div class="clear foot col-auto">
-                                    <input value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                                        class="btn btn-warning button-custom" type="submit">
-                                </div>
-                            </form>
-                        </div>
-                        <!--End ConvertKit Signup-->
+                        <button type="button" class="btn btn-warning button-custom" data-toggle="modal" data-target="#mailingListModal">
+                            Subscribe
+                        </button>
                     </div>
                 </div>
             </div>
@@ -447,6 +421,35 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
     <div class="copyright py-4 text-center text-white">
         <div class="container"><small>Copyright &copy; Kahone Concept 2026</small></div>
     </div>
+
+    <!-- Mailing List Modal -->
+    <div class="modal fade" id="mailingListModal" tabindex="-1" role="dialog" aria-labelledby="mailingListModalLabel" aria-modal="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content mailing-modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h4 class="modal-title text-uppercase w-100 text-center" id="mailingListModalLabel">
+                        Join the Mailing List
+                    </h4>
+                    <button type="button" class="close mailing-modal-close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center px-4 pb-4">
+                    <p class="mailing-modal-sub">Be the first to hear about new music and shows.</p>
+                    <form action="https://app.kit.com/forms/5090078/subscriptions"
+                        method="post" target="_blank" novalidate
+                        data-sv-form="5090078" data-uid="7d8ea78606">
+                        <div class="mb-3">
+                            <input type="email" name="email_address" class="form-control mailing-modal-input"
+                                placeholder="Your email address" required>
+                        </div>
+                        <button type="submit" class="btn btn-warning button-custom w-100">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Mailing List Modal -->
 
     <!-- Boostrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
