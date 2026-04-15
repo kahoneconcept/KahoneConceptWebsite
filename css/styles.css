@@ -142,10 +142,17 @@ h5 {
   color: #b8d3ed;
 }
 
+.bio-text-box {
+  background: rgba(0, 0, 0, 0.55);
+  border-left: 3px solid #FAC113;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  color: #b8d3ed;
+}
+
 /* so there is a background on mobile and toggle is clicked but there hasnt been any scrolling */
 @media(max-width:530px) {
   .bio-bg-img {
-
     font-size: .6em;
   }
 }
