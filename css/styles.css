@@ -62,11 +62,11 @@ header {
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
   position: fixed;
-  object-fit: center;
+  object-fit: cover;
   z-index: -1000;
   right: 0;
   bottom: 0;
-  min-width: 100vh;
+  min-width: 100vw;
   min-height: 100vh;
 }
 
@@ -75,15 +75,15 @@ header {
   color: #7f4a1e;
 }
 
-/* makes all images animated on hover */
-img {
+/* makes album art images animated on hover */
+img.img-fluid {
   border-radius: 10px;
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-img:hover {
+img.img-fluid:hover {
   -webkit-transform: scale(1.04);
   -moz-transform: scale(1.04);
   -o-transform: scale(1.04);
@@ -137,7 +137,8 @@ h5 {
   background-position: 80% center;
   font-family: 'Stoke', serif;
   width: 100vw;
-  height: 60em;
+  min-height: 60em;
+  padding-bottom: 4em;
   color: #b8d3ed;
 }
 
@@ -235,10 +236,10 @@ h5 {
   background-image: url('../assets/img/Contact_Banner.png');
   background-size: cover;
   background-position: center center;
-
   font-family: 'Stoke', serif;
   width: 100vw;
-  height: 60em;
+  min-height: 60em;
+  padding-bottom: 4em;
   color: #b8d3ed;
 }
 
