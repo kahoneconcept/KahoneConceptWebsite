@@ -59,15 +59,11 @@ header {
 /* END NAV BAR */
 
 /* BEGIN BODY */
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-  position: fixed;
-  object-fit: cover;
-  z-index: -1000;
-  right: 0;
-  bottom: 0;
-  min-width: 100vw;
-  min-height: 100vh;
+body {
+  background-image: url('../assets/img/kc_background_backup.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 .small-text {
