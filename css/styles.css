@@ -83,7 +83,8 @@ body::before {
 
 .small-text {
   font-family: 'Stoke', serif;
-  color: #7f4a1e;
+  color: #e8c9a0;
+  letter-spacing: 0.03em;
 }
 
 /* makes album art images animated on hover */
@@ -112,8 +113,9 @@ img.img-fluid:hover {
 }
 
 .live>p {
-  color: #7F491E !important;
+  color: #e8c9a0 !important;
   font-family: 'Stoke', serif;
+  letter-spacing: 0.04em;
 }
 
 .custom-section {
@@ -127,6 +129,8 @@ h4,
 h5 {
   font-family: 'Calistoga', cursive;
   color: #FAC113 !important;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 12px rgba(250, 193, 19, 0.25);
 }
 
 .button-custom {
@@ -151,17 +155,33 @@ h5 {
   min-height: 60em;
   padding-bottom: 4em;
   color: #b8d3ed;
+  position: relative;
 }
 
-.bio-text-box {
-  background: rgba(0, 0, 0, 0.55);
-  border-left: 3px solid #FAC113;
-  border-radius: 8px;
-  padding: 1.5rem 2rem;
-  color: #b8d3ed;
+/* dark gradient fades up from the bottom so text is readable */
+.bio-bg-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 6, 2, 0.85) 0%, rgba(10, 6, 2, 0.4) 50%, transparent 100%);
+  pointer-events: none;
 }
 
-/* so there is a background on mobile and toggle is clicked but there hasnt been any scrolling */
+/* text sits above the overlay */
+.bio-bg-img .container {
+  position: relative;
+  z-index: 1;
+}
+
+.bio-text {
+  font-family: 'Stoke', serif;
+  color: #e8c9a0;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+}
+
 @media(max-width:530px) {
   .bio-bg-img {
     font-size: .6em;
@@ -259,6 +279,20 @@ h5 {
   min-height: 60em;
   padding-bottom: 4em;
   color: #b8d3ed;
+  position: relative;
+}
+
+.contact-bg-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 6, 2, 0.85) 0%, rgba(10, 6, 2, 0.4) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.contact-bg-img .container {
+  position: relative;
+  z-index: 1;
 }
 
 
