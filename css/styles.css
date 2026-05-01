@@ -147,7 +147,11 @@ h5 {
 
 /* BIO SECTION */
 .bio-bg-img {
-  background-image: url('../assets/img/Bio_Banner.png');
+  background-image: url('../assets/img/Bio_Banner.webp');
+  background-image: image-set(
+    url('../assets/img/Bio_Banner.webp') type('image/webp'),
+    url('../assets/img/Bio_Banner.png') type('image/png')
+  );
   background-size: cover;
   background-position: 80% center;
   font-family: 'Stoke', serif;
@@ -271,7 +275,11 @@ h5 {
 
 /* CONTACT SECTION */
 .contact-bg-img {
-  background-image: url('../assets/img/Contact_Banner.png');
+  background-image: url('../assets/img/Contact_Banner.webp');
+  background-image: image-set(
+    url('../assets/img/Contact_Banner.webp') type('image/webp'),
+    url('../assets/img/Contact_Banner.png') type('image/png')
+  );
   background-size: cover;
   background-position: center center;
   font-family: 'Stoke', serif;
