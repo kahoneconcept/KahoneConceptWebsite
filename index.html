@@ -355,6 +355,120 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
         crossorigin="anonymous"></script>
     <!--Javascript-->
     <script src="js/scripts.js"></script>
+
+    <!-- TikTok Pixel — replace YOUR_TIKTOK_PIXEL_ID with your ID from TikTok Ads Manager -->
+    <script>
+    !function (w, d, t) {
+        w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+        ttq.load('YOUR_TIKTOK_PIXEL_ID');
+        ttq.page();
+    }(window, document, 'ttq');
+    </script>
+    <!-- End TikTok Pixel -->
+
+    <!-- Comprehensive Event Tracking -->
+    <script>
+    (function () {
+        function fbEvent(name, params) {
+            if (typeof fbq !== 'undefined') fbq('track', name, params || {});
+        }
+        function fbCustom(name, params) {
+            if (typeof fbq !== 'undefined') fbq('trackCustom', name, params || {});
+        }
+        function gaEvent(name, params) {
+            if (typeof gtag !== 'undefined') gtag('event', name, params || {});
+        }
+        function ttEvent(name, params) {
+            if (typeof ttq !== 'undefined') ttq.track(name, params || {});
+        }
+
+        // Stream Now — Greatest Hits
+        document.querySelectorAll('a[href*="link.kahoneconcept.com/TGH"]').forEach(function (el) {
+            el.addEventListener('click', function () {
+                fbEvent('ViewContent', { content_name: 'The Greatest Hits', content_category: 'Music', content_type: 'product' });
+                gaEvent('select_content', { content_type: 'music', content_id: 'the-greatest-hits' });
+                ttEvent('ViewContent', { content_name: 'The Greatest Hits', content_type: 'product' });
+            });
+        });
+
+        // WYEP Summer Music Festival — More Info
+        document.querySelectorAll('a[href*="wyep.org"]').forEach(function (el) {
+            el.addEventListener('click', function () {
+                fbEvent('ViewContent', { content_name: 'WYEP Summer Music Festival', content_category: 'Event' });
+                gaEvent('select_content', { content_type: 'show', content_id: 'wyep-summer-2026' });
+                ttEvent('ViewContent', { content_name: 'WYEP Summer Music Festival', content_type: 'event' });
+            });
+        });
+
+        // Merch Store
+        document.querySelectorAll('a[href*="creator-spring.com"]').forEach(function (el) {
+            el.addEventListener('click', function () {
+                fbEvent('InitiateCheckout', { content_name: 'Merch Store' });
+                gaEvent('begin_checkout', { items: [{ item_name: 'Merch Store' }] });
+                ttEvent('InitiateCheckout', { content_name: 'Merch Store' });
+            });
+        });
+
+        // Individual social platform clicks
+        var socialPlatforms = {
+            'open.spotify.com':            'Spotify',
+            'facebook.com/kahoneconcept':  'Facebook',
+            'twitter.com/kahoneconcept':   'Twitter',
+            'instagram.com/kahoneconcept': 'Instagram',
+            'youtube.com/kahoneconcept':   'YouTube',
+            'tiktok.com/@kahoneconcept':   'TikTok'
+        };
+        Object.keys(socialPlatforms).forEach(function (domain) {
+            document.querySelectorAll('a[href*="' + domain + '"]').forEach(function (el) {
+                el.addEventListener('click', function () {
+                    var platform = socialPlatforms[domain];
+                    fbCustom('SocialClick', { platform: platform });
+                    gaEvent('select_content', { content_type: 'social', content_id: platform.toLowerCase() });
+                    ttEvent('ClickButton', { content_name: platform + ' Social Link' });
+                });
+            });
+        });
+
+        // Socials nav link
+        document.querySelectorAll('a[href*="link.kahoneconcept.com/socials"]').forEach(function (el) {
+            el.addEventListener('click', function () {
+                fbCustom('SocialClick', { platform: 'All Socials' });
+                gaEvent('select_content', { content_type: 'social', content_id: 'all-socials' });
+            });
+        });
+
+        // Mailing list modal open
+        var mailingListBtn = document.querySelector('[data-target="#mailingListModal"]');
+        if (mailingListBtn) {
+            mailingListBtn.addEventListener('click', function () {
+                fbEvent('ViewContent', { content_name: 'Mailing List', content_category: 'Newsletter' });
+                gaEvent('view_item', { items: [{ item_name: 'Mailing List Signup' }] });
+                ttEvent('ViewContent', { content_name: 'Mailing List Signup' });
+            });
+        }
+
+        // Mailing list form submit
+        var mailingForm = document.querySelector('#mailingListModal form');
+        if (mailingForm) {
+            mailingForm.addEventListener('submit', function () {
+                fbEvent('CompleteRegistration', { content_name: 'Mailing List' });
+                gaEvent('sign_up', { method: 'email' });
+                ttEvent('CompleteRegistration', { content_name: 'Mailing List' });
+            });
+        }
+
+        // Contact form submit
+        var contactForm = document.getElementById('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function () {
+                fbEvent('Lead', { content_name: 'Contact Form' });
+                gaEvent('generate_lead', { source: 'contact_form' });
+                ttEvent('Contact', { content_name: 'Contact Form' });
+            });
+        }
+    })();
+    </script>
+    <!-- End Comprehensive Event Tracking -->
 </body>
 
 </html>
