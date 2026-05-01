@@ -391,3 +391,14 @@ h5 {
   outline: none;
 }
 /* END MAILING LIST MODAL */
+
+/* CONTACT FORM SUCCESS */
+#form-success {
+  background-color: rgba(127, 73, 30, 0.4);
+  border: 1px solid #FAC113;
+  border-radius: 8px;
+  color: #FAC113;
+  font-family: 'Stoke', serif;
+  margin-bottom: 1.5rem;
+}
+/* END CONTACT FORM SUCCESS */

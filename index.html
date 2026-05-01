@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Kahone Concept - Official Website</title>
+    <title>Kahone Concept | Pittsburgh Indie Pop Artist</title>
     <meta name="description" content="Kahone Concept is an independent pop artist and producer from Pittsburgh, PA. Stream new music, check out upcoming shows, and get in touch." />
     <meta name="author" content="Kahone Concept" />
     <link rel="canonical" href="https://www.kahoneconcept.com" />
@@ -39,6 +39,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/Kahone_Concept_Favicon.png" />
+    <link rel="apple-touch-icon" href="assets/Kahone_Concept_Favicon.png" />
+    <meta name="theme-color" content="#0d0804" />
     <!-- Font Awesome icons-->
     <script src="https://kit.fontawesome.com/7bd80d0d31.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -55,8 +57,6 @@
         gtag('config', 'G-X4QYNKHZ3R');
     </script>
     <!-- Meta Pixel Code -->
-    <!-- ConvertKit -->
-    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -80,22 +80,59 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MusicGroup",
-      "name": "Kahone Concept",
-      "url": "https://www.kahoneconcept.com",
-      "description": "Kahone Concept is an independent pop artist and producer from Pittsburgh, PA.",
-      "genre": ["Pop", "Indie Pop"],
-      "foundingLocation": {
-        "@type": "Place",
-        "name": "Pittsburgh, PA"
-      },
-      "sameAs": [
-        "https://open.spotify.com/artist/6O4bbRzJEdKC8nSlaMaTz4",
-        "https://www.facebook.com/kahoneconcept",
-        "https://www.twitter.com/kahoneconcept",
-        "https://www.instagram.com/kahoneconcept",
-        "https://www.youtube.com/kahoneconcept",
-        "https://www.tiktok.com/@kahoneconcept"
+      "@graph": [
+        {
+          "@type": "MusicGroup",
+          "@id": "https://www.kahoneconcept.com/#artist",
+          "name": "Kahone Concept",
+          "url": "https://www.kahoneconcept.com",
+          "description": "Kahone Concept is an independent pop artist and producer from Pittsburgh, PA.",
+          "genre": ["Pop", "Indie Pop"],
+          "foundingLocation": {
+            "@type": "Place",
+            "name": "Pittsburgh, PA"
+          },
+          "sameAs": [
+            "https://open.spotify.com/artist/6O4bbRzJEdKC8nSlaMaTz4",
+            "https://www.facebook.com/kahoneconcept",
+            "https://www.twitter.com/kahoneconcept",
+            "https://www.instagram.com/kahoneconcept",
+            "https://www.youtube.com/kahoneconcept",
+            "https://www.tiktok.com/@kahoneconcept"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "name": "The Greatest Hits",
+          "byArtist": { "@id": "https://www.kahoneconcept.com/#artist" },
+          "url": "https://link.kahoneconcept.com/TGH",
+          "image": "https://www.kahoneconcept.com/assets/img/music/GREATEST_HITS-KAHONE.jpg",
+          "albumReleaseType": "https://schema.org/AlbumRelease"
+        },
+        {
+          "@type": "Event",
+          "name": "WYEP Summer Music Festival",
+          "startDate": "2026-06-27T16:00",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": {
+            "@type": "Place",
+            "name": "WYEP Summer Music Festival",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Pittsburgh",
+              "addressRegion": "PA",
+              "addressCountry": "US"
+            }
+          },
+          "performer": { "@id": "https://www.kahoneconcept.com/#artist" },
+          "url": "https://www.wyep.org/wyep-programming/2026-05-01/summer-music-festival-michgander-ratboys",
+          "organizer": {
+            "@type": "Organization",
+            "name": "WYEP",
+            "url": "https://www.wyep.org"
+          }
+        }
       ]
     }
     </script>
@@ -154,7 +191,7 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
                 <div class="text-center mt-5">
                     <div class="landing-hero mx-auto">
                         <a href="https://link.kahoneconcept.com/TGH">
-                            <img class="img-fluid landing-album" src="assets/img/music/GREATEST_HITS-KAHONE.jpg" alt="The Greatest Hits" />
+                            <img class="img-fluid landing-album" src="assets/img/music/GREATEST_HITS-KAHONE.jpg" alt="The Greatest Hits" loading="lazy" />
                         </a>
                         <p class="mt-3"><a href="https://link.kahoneconcept.com/TGH" class="btn btn-warning button-custom" rel="noopener noreferrer">Stream Now</a></p>
                     </div>
@@ -231,7 +268,12 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
                 <!-- Contact Section Form-->
                 <div class="row justify-content-center text-center mt-5">
                     <div class="col-lg-8 col-xl-7 ">
+                        <div id="form-success" style="display:none;" class="alert" role="alert">
+                            Message sent! I'll get back to you soon.
+                        </div>
                         <form id="form" action="https://formsubmit.co/kahoneconcept@gmail.com" method="POST">
+                            <input type="hidden" name="_next" value="https://www.kahoneconcept.com?sent=1#contact">
+                            <input type="hidden" name="_subject" value="New message from kahoneconcept.com">
                             <div class="formControl form-floating mb-3">
                                 <!-- i put breaks to separate the lines -->
                                 <label for="fullName" class="w-75">Name<br>
@@ -353,8 +395,23 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <!-- ConvertKit -->
+    <script src="https://f.convertkit.com/ckjs/ck.5.js" async></script>
     <!--Javascript-->
     <script src="js/scripts.js"></script>
+
+    <!-- Contact form success message -->
+    <script>
+    (function () {
+        if (window.location.search.indexOf('sent=1') !== -1) {
+            var msg = document.getElementById('form-success');
+            if (msg) {
+                msg.style.display = 'block';
+                window.history.replaceState({}, document.title, window.location.pathname + '#contact');
+            }
+        }
+    })();
+    </script>
 
     <!-- TikTok Pixel — add when pixel ID is available from TikTok Ads Manager -->
 
