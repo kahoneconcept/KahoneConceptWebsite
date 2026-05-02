@@ -93,20 +93,22 @@
             display: inline-flex;
             align-items: center;
             gap: 0.4rem;
+            min-height: 44px;
+            padding: 0.5rem 0;
             color: rgba(250, 193, 19, 0.7);
             font-family: 'Calistoga', cursive;
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.08em;
             text-decoration: none;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
             transition: color 0.15s ease;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .back-btn:hover {
-            color: #FAC113;
-            text-decoration: none;
-        }
+        .back-btn:hover { color: #FAC113; text-decoration: none; }
+        .back-btn:active { color: #FAC113; opacity: 0.7; }
 
         .album-art {
             width: 200px;
@@ -140,6 +142,7 @@
             justify-content: flex-start;
             gap: 1rem;
             width: 100%;
+            min-height: 56px;
             padding: 0.9rem 1.5rem;
             border-radius: 50px;
             text-decoration: none;
@@ -150,19 +153,35 @@
             font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 0.04em;
-            transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+            transition: background-color 0.15s ease, box-shadow 0.15s ease;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .link-btn:hover, .link-btn:focus {
-            text-decoration: none;
-            color: #FAC113;
-            background-color: rgba(250, 193, 19, 0.08);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(250, 193, 19, 0.2);
-            outline: none;
+        .link-btn:focus-visible {
+            outline: 2px solid #FAC113;
+            outline-offset: 3px;
         }
 
-        .link-btn:active { transform: translateY(0); }
+        .link-btn:active {
+            background-color: rgba(250, 193, 19, 0.15);
+            opacity: 0.85;
+        }
+
+        @media (hover: hover) {
+            .link-btn:hover {
+                text-decoration: none;
+                color: #FAC113;
+                background-color: rgba(250, 193, 19, 0.08);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(250, 193, 19, 0.2);
+            }
+            #link-spotify:hover      { border-color: #1DB954; color: #1DB954; box-shadow: 0 6px 20px rgba(29,185,84,0.2); }
+            #link-apple-music:hover  { border-color: #fc3c44; color: #fc3c44; box-shadow: 0 6px 20px rgba(252,60,68,0.2); }
+            #link-youtube:hover      { border-color: #FF0000; color: #FF0000; box-shadow: 0 6px 20px rgba(255,0,0,0.2); }
+            #link-amazon:hover       { border-color: #FF9900; color: #FF9900; box-shadow: 0 6px 20px rgba(255,153,0,0.2); }
+            #link-tidal:hover        { border-color: #a0f0f0; color: #a0f0f0; box-shadow: 0 6px 20px rgba(160,240,240,0.2); }
+        }
 
         .platform-icon {
             font-size: 1.3rem;
@@ -170,12 +189,6 @@
             text-align: center;
             flex-shrink: 0;
         }
-
-        #link-spotify:hover      { border-color: #1DB954; color: #1DB954; box-shadow: 0 6px 20px rgba(29,185,84,0.2); }
-        #link-apple-music:hover  { border-color: #fc3c44; color: #fc3c44; box-shadow: 0 6px 20px rgba(252,60,68,0.2); }
-        #link-youtube:hover      { border-color: #FF0000; color: #FF0000; box-shadow: 0 6px 20px rgba(255,0,0,0.2); }
-        #link-amazon:hover       { border-color: #FF9900; color: #FF9900; box-shadow: 0 6px 20px rgba(255,153,0,0.2); }
-        #link-tidal:hover        { border-color: #a0f0f0; color: #a0f0f0; box-shadow: 0 6px 20px rgba(160,240,240,0.2); }
 
         .links-footer {
             margin-top: 2rem;

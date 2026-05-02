@@ -110,26 +110,35 @@
             align-items: center;
             justify-content: center;
             width: 100%;
+            min-height: 56px;
             padding: 0.85rem 1.5rem;
             border-radius: 50px;
             text-align: center;
             text-decoration: none;
             border: 2px solid #FAC113;
-            transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+            transition: background-color 0.15s ease, box-shadow 0.15s ease;
             cursor: pointer;
             background: none;
             font-family: 'Calistoga', cursive;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .link-btn:hover, .link-btn:focus {
-            text-decoration: none;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(250, 193, 19, 0.25);
-            outline: none;
+        .link-btn:focus-visible {
+            outline: 2px solid #FAC113;
+            outline-offset: 3px;
         }
 
         .link-btn:active {
-            transform: translateY(0);
+            opacity: 0.75;
+        }
+
+        @media (hover: hover) {
+            .link-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(250, 193, 19, 0.25);
+                text-decoration: none;
+            }
         }
 
         .link-btn-primary {
@@ -137,9 +146,13 @@
             color: #0d0804;
         }
 
-        .link-btn-primary:hover, .link-btn-primary:focus {
+        .link-btn-primary:hover, .link-btn-primary:focus-visible {
             background-color: #e6ad10;
             color: #0d0804;
+        }
+
+        .link-btn-primary:active {
+            background-color: #c99a0e;
         }
 
         .link-btn-outline {
@@ -147,15 +160,14 @@
             color: #FAC113;
         }
 
-        .link-btn-outline:hover, .link-btn-outline:focus {
-            background-color: rgba(250, 193, 19, 0.08);
-            color: #FAC113;
+        .link-btn-outline:active {
+            background-color: rgba(250, 193, 19, 0.15);
         }
 
         .link-label {
             display: block;
-            font-size: 0.6rem;
-            letter-spacing: 0.14em;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
             opacity: 0.65;
             margin-bottom: 0.15rem;
@@ -163,7 +175,7 @@
 
         .link-title {
             display: block;
-            font-size: 0.95rem;
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 0.04em;
         }
@@ -193,9 +205,10 @@
             background: rgba(255, 255, 255, 0.06);
             color: #fff;
             font-family: 'Stoke', serif;
-            font-size: 0.9rem;
+            font-size: 1rem; /* 16px minimum prevents iOS zoom */
             text-align: center;
             outline: none;
+            -webkit-appearance: none;
         }
 
         .mailing-expand input[type="email"]::placeholder {
