@@ -110,30 +110,18 @@
         .back-btn:hover { color: #FAC113; text-decoration: none; }
         .back-btn:active { color: #FAC113; opacity: 0.7; }
 
-        .album-art {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-            margin-bottom: 0.75rem;
+        .links-logo {
+            width: 120px;
+            margin-bottom: 0.5rem;
         }
 
-        .album-title {
+        .page-heading {
             font-family: 'Calistoga', cursive;
-            font-size: 1.2rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #FAC113;
-            text-align: center;
-        }
-
-        .album-artist {
-            font-family: 'Stoke', serif;
-            font-size: 0.85rem;
-            color: rgba(184, 211, 237, 0.8);
-            text-align: center;
-            margin-bottom: 1rem;
+            letter-spacing: 0.16em;
+            color: rgba(250, 193, 19, 0.55);
+            margin-bottom: 1.25rem;
         }
 
         .link-btn {
@@ -215,13 +203,11 @@
             <i class="fas fa-chevron-left"></i> All Links
         </a>
 
-        <picture>
-            <source srcset="/assets/img/music/GREATEST_HITS-KAHONE.webp" type="image/webp">
-            <img src="/assets/img/music/GREATEST_HITS-KAHONE.jpg" alt="The Greatest Hits" class="album-art" loading="lazy" />
-        </picture>
+        <a href="/" aria-label="Kahone Concept Home">
+            <img src="/assets/img/KC_Logo_Large_Yellow.svg" alt="Kahone Concept" class="links-logo" />
+        </a>
 
-        <p class="album-title">The Greatest Hits</p>
-        <p class="album-artist">Kahone Concept</p>
+        <p class="page-heading">Stream Music</p>
 
         <a href="https://open.spotify.com/playlist/4Fo6nFS09x8q6h9ZCZ87Tt" target="_blank" rel="noopener noreferrer"
            class="link-btn" id="link-spotify">
