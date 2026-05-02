@@ -150,10 +150,10 @@ h5 {
   background-image: url('../assets/img/Bio_Banner.webp');
   background-image: image-set(
     url('../assets/img/Bio_Banner.webp') type('image/webp'),
-    url('../assets/img/Bio_Banner.png') type('image/png')
+    url('../assets/img/Bio_Banner.jpg') type('image/jpeg')
   );
   background-size: cover;
-  background-position: 80% center;
+  background-position: center top;
   font-family: 'Stoke', serif;
   width: 100vw;
   min-height: 60em;
@@ -238,6 +238,15 @@ h5 {
   }
 } */
 
+#landing {
+  background-image:
+    linear-gradient(rgba(13, 8, 4, 0.45), rgba(13, 8, 4, 0.65)),
+    url('../assets/img/landing-hero.webp');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
 /* END LANDING SECTION */
 
 /* DIVIDERS */
@@ -278,10 +287,10 @@ h5 {
   background-image: url('../assets/img/Contact_Banner.webp');
   background-image: image-set(
     url('../assets/img/Contact_Banner.webp') type('image/webp'),
-    url('../assets/img/Contact_Banner.png') type('image/png')
+    url('../assets/img/Contact_Banner.jpg') type('image/jpeg')
   );
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
   font-family: 'Stoke', serif;
   width: 100vw;
   min-height: 60em;
