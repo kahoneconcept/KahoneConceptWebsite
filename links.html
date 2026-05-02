@@ -88,9 +88,20 @@
             gap: 0.75rem;
         }
 
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 50%;
+            border: 3px solid #FAC113;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            margin-bottom: 0.75rem;
+        }
+
         .links-logo {
-            width: 160px;
-            margin-bottom: 1.75rem;
+            width: 140px;
+            margin-bottom: 1.5rem;
         }
 
         .link-btn {
@@ -237,12 +248,17 @@
 <body>
     <div class="links-container">
 
+        <picture>
+            <source srcset="assets/img/KahoneConcept_Final_1080X1350.webp" type="image/webp">
+            <img src="assets/img/KahoneConcept_Final_1080X1350.jpg" alt="Kahone Concept" class="profile-img" loading="eager" />
+        </picture>
+
         <a href="/" aria-label="Kahone Concept Home">
             <img src="assets/img/KC_Logo_Large_Yellow.svg" alt="Kahone Concept" class="links-logo" />
         </a>
 
         <!-- Stream -->
-        <a href="https://link.kahoneconcept.com/TGH" target="_blank" rel="noopener noreferrer"
+        <a href="/links-music.html"
            class="link-btn link-btn-primary" id="link-stream">
             <span class="link-label">New Album</span>
             <span class="link-title">The Greatest Hits &mdash; Stream Now</span>
@@ -257,7 +273,7 @@
         </a>
 
         <!-- Social Media -->
-        <a href="links-socials.html" class="link-btn link-btn-outline" id="link-socials">
+        <a href="/links-socials.html" class="link-btn link-btn-outline" id="link-socials">
             <span class="link-label">Stay Connected</span>
             <span class="link-title">Follow on Social Media</span>
         </a>
@@ -335,10 +351,13 @@
             gaEvent('begin_checkout', { items: [{ item_name: 'Merch Store' }] });
         });
 
-        // Mailing list open
+        // Mailing list open (only fires when opening, not closing)
         document.getElementById('link-mailing').addEventListener('click', function () {
-            fbEvent('ViewContent', { content_name: 'Mailing List', content_category: 'Newsletter' });
-            gaEvent('view_item', { items: [{ item_name: 'Mailing List Signup' }] });
+            var isCurrentlyOpen = document.getElementById('mailing-form').classList.contains('open');
+            if (!isCurrentlyOpen) {
+                fbEvent('ViewContent', { content_name: 'Mailing List', content_category: 'Newsletter' });
+                gaEvent('view_item', { items: [{ item_name: 'Mailing List Signup' }] });
+            }
         });
 
         // Mailing list submit

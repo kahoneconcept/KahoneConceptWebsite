@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Kahone Concept | Follow on Social Media</title>
-    <meta name="description" content="Follow Kahone Concept on Spotify, Instagram, TikTok, YouTube, Facebook, and more." />
-    <link rel="canonical" href="https://www.kahoneconcept.com/links-socials" />
+    <title>Kahone Concept | Stream The Greatest Hits</title>
+    <meta name="description" content="Stream The Greatest Hits by Kahone Concept on Spotify, Apple Music, YouTube, and more." />
+    <link rel="canonical" href="https://www.kahoneconcept.com/links-music" />
     <link rel="icon" type="image/x-icon" href="assets/Kahone_Concept_Favicon.png" />
     <link rel="apple-touch-icon" href="assets/Kahone_Concept_Favicon.png" />
     <meta name="theme-color" content="#0d0804" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Follow Kahone Concept on Social Media" />
-    <meta property="og:description" content="Follow Kahone Concept on Spotify, Instagram, TikTok, YouTube, Facebook, and more." />
-    <meta property="og:url" content="https://www.kahoneconcept.com/links-socials" />
-    <meta property="og:image" content="https://www.kahoneconcept.com/assets/img/KC_Logo_Large_Yellow.svg" />
+    <meta property="og:title" content="Stream The Greatest Hits — Kahone Concept" />
+    <meta property="og:description" content="Stream The Greatest Hits by Kahone Concept on your favorite platform." />
+    <meta property="og:url" content="https://www.kahoneconcept.com/links-music" />
+    <meta property="og:image" content="https://www.kahoneconcept.com/assets/img/music/GREATEST_HITS-KAHONE.jpg" />
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4QYNKHZ3R"></script>
@@ -108,18 +108,30 @@
             text-decoration: none;
         }
 
-        .links-logo {
-            width: 120px;
-            margin-bottom: 0.5rem;
+        .album-art {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+            margin-bottom: 0.75rem;
         }
 
-        .page-heading {
+        .album-title {
             font-family: 'Calistoga', cursive;
-            font-size: 0.7rem;
+            font-size: 1.2rem;
             text-transform: uppercase;
-            letter-spacing: 0.16em;
-            color: rgba(250, 193, 19, 0.55);
-            margin-bottom: 1.25rem;
+            letter-spacing: 0.05em;
+            color: #FAC113;
+            text-align: center;
+        }
+
+        .album-artist {
+            font-family: 'Stoke', serif;
+            font-size: 0.85rem;
+            color: rgba(184, 211, 237, 0.8);
+            text-align: center;
+            margin-bottom: 1rem;
         }
 
         .link-btn {
@@ -150,24 +162,20 @@
             outline: none;
         }
 
-        .link-btn:active {
-            transform: translateY(0);
-        }
+        .link-btn:active { transform: translateY(0); }
 
-        .link-btn .platform-icon {
+        .platform-icon {
             font-size: 1.3rem;
             width: 1.5rem;
             text-align: center;
             flex-shrink: 0;
         }
 
-        /* Platform-specific accent colors on hover */
-        #link-spotify:hover  { border-color: #1DB954; color: #1DB954; box-shadow: 0 6px 20px rgba(29,185,84,0.2); }
-        #link-instagram:hover{ border-color: #E1306C; color: #E1306C; box-shadow: 0 6px 20px rgba(225,48,108,0.2); }
-        #link-tiktok:hover   { border-color: #69C9D0; color: #69C9D0; box-shadow: 0 6px 20px rgba(105,201,208,0.2); }
-        #link-youtube:hover  { border-color: #FF0000; color: #FF0000; box-shadow: 0 6px 20px rgba(255,0,0,0.2); }
-        #link-facebook:hover { border-color: #1877F2; color: #1877F2; box-shadow: 0 6px 20px rgba(24,119,242,0.2); }
-        #link-twitter:hover  { border-color: #1DA1F2; color: #1DA1F2; box-shadow: 0 6px 20px rgba(29,161,242,0.2); }
+        #link-spotify:hover      { border-color: #1DB954; color: #1DB954; box-shadow: 0 6px 20px rgba(29,185,84,0.2); }
+        #link-apple-music:hover  { border-color: #fc3c44; color: #fc3c44; box-shadow: 0 6px 20px rgba(252,60,68,0.2); }
+        #link-youtube:hover      { border-color: #FF0000; color: #FF0000; box-shadow: 0 6px 20px rgba(255,0,0,0.2); }
+        #link-amazon:hover       { border-color: #FF9900; color: #FF9900; box-shadow: 0 6px 20px rgba(255,153,0,0.2); }
+        #link-tidal:hover        { border-color: #a0f0f0; color: #a0f0f0; box-shadow: 0 6px 20px rgba(160,240,240,0.2); }
 
         .links-footer {
             margin-top: 2rem;
@@ -182,9 +190,7 @@
             letter-spacing: 0.06em;
         }
 
-        .links-footer a:hover {
-            color: rgba(255, 255, 255, 0.6);
-        }
+        .links-footer a:hover { color: rgba(255, 255, 255, 0.6); }
     </style>
 </head>
 
@@ -195,11 +201,13 @@
             <i class="fas fa-chevron-left"></i> All Links
         </a>
 
-        <a href="/" aria-label="Kahone Concept Home">
-            <img src="assets/img/KC_Logo_Large_Yellow.svg" alt="Kahone Concept" class="links-logo" />
-        </a>
+        <picture>
+            <source srcset="assets/img/music/GREATEST_HITS-KAHONE.webp" type="image/webp">
+            <img src="assets/img/music/GREATEST_HITS-KAHONE.jpg" alt="The Greatest Hits" class="album-art" loading="lazy" />
+        </picture>
 
-        <p class="page-heading">Follow on Social Media</p>
+        <p class="album-title">The Greatest Hits</p>
+        <p class="album-artist">Kahone Concept</p>
 
         <a href="https://open.spotify.com/artist/6O4bbRzJEdKC8nSlaMaTz4" target="_blank" rel="noopener noreferrer"
            class="link-btn" id="link-spotify">
@@ -207,16 +215,10 @@
             Spotify
         </a>
 
-        <a href="https://www.instagram.com/kahoneconcept" target="_blank" rel="noopener noreferrer"
-           class="link-btn" id="link-instagram">
-            <span class="platform-icon"><i class="fab fa-instagram"></i></span>
-            Instagram
-        </a>
-
-        <a href="https://www.tiktok.com/@kahoneconcept" target="_blank" rel="noopener noreferrer"
-           class="link-btn" id="link-tiktok">
-            <span class="platform-icon"><i class="fab fa-tiktok"></i></span>
-            TikTok
+        <a href="https://music.apple.com/us/artist/kahone-concept" target="_blank" rel="noopener noreferrer"
+           class="link-btn" id="link-apple-music">
+            <span class="platform-icon"><i class="fab fa-apple"></i></span>
+            Apple Music
         </a>
 
         <a href="https://www.youtube.com/kahoneconcept" target="_blank" rel="noopener noreferrer"
@@ -225,16 +227,16 @@
             YouTube
         </a>
 
-        <a href="https://www.facebook.com/kahoneconcept" target="_blank" rel="noopener noreferrer"
-           class="link-btn" id="link-facebook">
-            <span class="platform-icon"><i class="fab fa-facebook-f"></i></span>
-            Facebook
+        <a href="https://music.amazon.com/artists/kahone-concept" target="_blank" rel="noopener noreferrer"
+           class="link-btn" id="link-amazon">
+            <span class="platform-icon"><i class="fab fa-amazon"></i></span>
+            Amazon Music
         </a>
 
-        <a href="https://www.twitter.com/kahoneconcept" target="_blank" rel="noopener noreferrer"
-           class="link-btn" id="link-twitter">
-            <span class="platform-icon"><i class="fab fa-twitter"></i></span>
-            Twitter / X
+        <a href="https://tidal.com/browse/artist/kahone-concept" target="_blank" rel="noopener noreferrer"
+           class="link-btn" id="link-tidal">
+            <span class="platform-icon"><i class="fas fa-music"></i></span>
+            Tidal
         </a>
 
         <div class="links-footer">
@@ -256,12 +258,11 @@
         }
 
         var platforms = {
-            'link-spotify':   'Spotify',
-            'link-instagram': 'Instagram',
-            'link-tiktok':    'TikTok',
-            'link-youtube':   'YouTube',
-            'link-facebook':  'Facebook',
-            'link-twitter':   'Twitter'
+            'link-spotify':     'Spotify',
+            'link-apple-music': 'Apple Music',
+            'link-youtube':     'YouTube',
+            'link-amazon':      'Amazon Music',
+            'link-tidal':       'Tidal'
         };
 
         Object.keys(platforms).forEach(function (id) {
@@ -269,8 +270,9 @@
             if (!el) return;
             el.addEventListener('click', function () {
                 var platform = platforms[id];
-                fbCustom('SocialClick', { platform: platform });
-                gaEvent('select_content', { content_type: 'social', content_id: platform.toLowerCase() });
+                fbEvent('ViewContent', { content_name: 'The Greatest Hits', content_category: 'Music', content_type: platform });
+                fbCustom('StreamClick', { platform: platform, album: 'The Greatest Hits' });
+                gaEvent('select_content', { content_type: 'streaming', content_id: platform.toLowerCase().replace(' ', '-'), item_list_name: 'The Greatest Hits' });
             });
         });
     })();
