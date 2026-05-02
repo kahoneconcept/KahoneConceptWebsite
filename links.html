@@ -313,6 +313,20 @@
             </form>
         </div>
 
+        <!-- Spotify Playlist -->
+        <a href="https://open.spotify.com/playlist/4Fo6nFS09x8q6h9ZCZ87Tt" target="_blank" rel="noopener noreferrer"
+           class="link-btn link-btn-outline" id="link-playlist">
+            <span class="link-label">Spotify</span>
+            <span class="link-title">Kahone Concept Playlist</span>
+        </a>
+
+        <!-- Songs4Friends -->
+        <a href="https://drive.google.com/drive/folders/1mgNB_rYst___4Mc1rb_aWW5mD4RGafsl" target="_blank" rel="noopener noreferrer"
+           class="link-btn link-btn-outline" id="link-songs4friends">
+            <span class="link-label">Free Download</span>
+            <span class="link-title">Songs4Friends</span>
+        </a>
+
         <!-- Contact -->
         <a href="/#contact" class="link-btn link-btn-outline" id="link-contact">
             <span class="link-label">Booking &amp; Press</span>
@@ -377,6 +391,18 @@
         document.getElementById('mailing-list-form').addEventListener('submit', function () {
             fbEvent('CompleteRegistration', { content_name: 'Mailing List' });
             gaEvent('sign_up', { method: 'email' });
+        });
+
+        // Spotify Playlist
+        document.getElementById('link-playlist').addEventListener('click', function () {
+            fbCustom('SocialClick', { platform: 'Spotify', content: 'Playlist' });
+            gaEvent('select_content', { content_type: 'music', content_id: 'spotify-playlist' });
+        });
+
+        // Songs4Friends
+        document.getElementById('link-songs4friends').addEventListener('click', function () {
+            fbEvent('ViewContent', { content_name: 'Songs4Friends', content_category: 'Free Music' });
+            gaEvent('select_content', { content_type: 'music', content_id: 'songs4friends' });
         });
 
         // Contact
