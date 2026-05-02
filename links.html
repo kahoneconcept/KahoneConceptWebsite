@@ -270,11 +270,11 @@
             <img src="assets/img/KC_Logo_Large_Yellow.svg" alt="Kahone Concept" class="links-logo" />
         </a>
 
-        <!-- Stream -->
+        <!-- Music -->
         <a href="/links-music.html"
            class="link-btn link-btn-primary" id="link-stream">
-            <span class="link-label">New Album</span>
-            <span class="link-title">The Greatest Hits &mdash; Stream Now</span>
+            <span class="link-label">Stream &amp; Download</span>
+            <span class="link-title">Music</span>
         </a>
 
         <!-- Live Show -->
@@ -312,13 +312,6 @@
                 <button type="submit">Subscribe</button>
             </form>
         </div>
-
-        <!-- Spotify Playlist -->
-        <a href="https://open.spotify.com/playlist/4Fo6nFS09x8q6h9ZCZ87Tt" target="_blank" rel="noopener noreferrer"
-           class="link-btn link-btn-outline" id="link-playlist">
-            <span class="link-label">Spotify</span>
-            <span class="link-title">Kahone Concept Playlist</span>
-        </a>
 
         <!-- Songs4Friends -->
         <a href="https://drive.google.com/drive/folders/1mgNB_rYst___4Mc1rb_aWW5mD4RGafsl" target="_blank" rel="noopener noreferrer"
@@ -391,12 +384,6 @@
         document.getElementById('mailing-list-form').addEventListener('submit', function () {
             fbEvent('CompleteRegistration', { content_name: 'Mailing List' });
             gaEvent('sign_up', { method: 'email' });
-        });
-
-        // Spotify Playlist
-        document.getElementById('link-playlist').addEventListener('click', function () {
-            fbCustom('SocialClick', { platform: 'Spotify', content: 'Playlist' });
-            gaEvent('select_content', { content_type: 'music', content_id: 'spotify-playlist' });
         });
 
         // Songs4Friends
