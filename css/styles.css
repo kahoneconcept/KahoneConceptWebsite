@@ -30,9 +30,9 @@ header {
 }
 
 #mainNav.scrolled {
-  background-color: rgba(13, 8, 4, 0.88) !important;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background-color: rgba(20, 12, 6, 0.55) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(250, 193, 19, 0.2);
 }
 
