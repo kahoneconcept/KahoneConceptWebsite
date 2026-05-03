@@ -6,44 +6,6 @@ $(function () {
     });
 });
 
-// Full-screen nav overlay
-(function () {
-    var hamburgerBtn = document.getElementById('hamburgerBtn');
-    var navOverlay   = document.getElementById('navOverlay');
-    var overlayClose = document.getElementById('overlayClose');
-    if (!hamburgerBtn || !navOverlay) return;
-
-    function openMenu() {
-        hamburgerBtn.classList.add('active');
-        hamburgerBtn.setAttribute('aria-expanded', 'true');
-        navOverlay.classList.add('open');
-        navOverlay.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeMenu() {
-        hamburgerBtn.classList.remove('active');
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
-        navOverlay.classList.remove('open');
-        navOverlay.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-    }
-
-    hamburgerBtn.addEventListener('click', function () {
-        navOverlay.classList.contains('open') ? closeMenu() : openMenu();
-    });
-
-    if (overlayClose) overlayClose.addEventListener('click', closeMenu);
-
-    document.querySelectorAll('.overlay-link').forEach(function (link) {
-        link.addEventListener('click', closeMenu);
-    });
-
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeMenu();
-    });
-})();
-
 
 // Contact form validation
 const form = document.getElementById('form');
