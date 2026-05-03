@@ -19,41 +19,133 @@ html {
 }
 
 /* BEGIN NAV BAR */
-/* changes color of navbar toggle switch */
-/* 56px is a good header height and is used a lot in making sure items dont go under header */
 header {
   height: 56px;
 }
 
-.navbar-toggler {
-  background-color: #FAC113;
+#mainNav {
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.35s ease, border-bottom 0.35s ease, backdrop-filter 0.35s ease;
 }
 
-/* so there is a background on mobile and toggle is clicked but there hasnt been any scrolling */
-@media(max-width:767px) {
-  .navbar-collapse {
-    background-color: #FAC113 !important;
-    border-radius: 5px;
-    padding: 5px;
-  }
+#mainNav.scrolled {
+  background-color: rgba(13, 8, 4, 0.88) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(250, 193, 19, 0.22);
+}
+
+.desktop-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
 }
 
 .navbar-text {
   font-family: 'Calistoga', cursive;
   text-transform: uppercase;
-  color: #7F491E !important;
-  font-size: 1.5em;
+  color: rgba(250, 193, 19, 0.82) !important;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
 }
 
 .navbar-text:hover {
-  color: #b8d3ed !important;
-  transition: all 0.5s;
+  color: #FAC113 !important;
+  transition: color 0.2s ease;
 }
 
-/* change color of background on scroll */
-#mainNav.scrolled {
-  background-color: #FAC113 !important;
-  transition: background-color 200ms linear;
+/* Hamburger — hidden on desktop */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1100;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #FAC113;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger-btn.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger-btn.active span:nth-child(2) { opacity: 0; }
+.hamburger-btn.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* Full-screen overlay menu */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 8, 4, 0.97);
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.nav-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.overlay-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: rgba(250, 193, 19, 0.6);
+  font-size: 2.2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.5rem;
+  transition: color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.overlay-close:hover { color: #FAC113; }
+
+.overlay-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.overlay-link {
+  font-family: 'Calistoga', cursive;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(250, 193, 19, 0.75);
+  text-decoration: none;
+  padding: 0.35rem 1rem;
+  transition: color 0.2s ease, letter-spacing 0.2s ease;
+}
+
+.overlay-link:hover {
+  color: #FAC113;
+  letter-spacing: 0.13em;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .desktop-nav-links { display: none; }
+  .hamburger-btn { display: flex; }
 }
 
 /* END NAV BAR */
