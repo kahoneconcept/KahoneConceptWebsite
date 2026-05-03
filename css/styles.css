@@ -143,6 +143,32 @@ h5 {
   background-color: #FAC113;
 }
 
+/* SECTION BACKGROUNDS */
+#music {
+  background-image:
+    linear-gradient(rgba(13, 8, 4, 0.62), rgba(13, 8, 4, 0.62)),
+    url('../assets/img/music-bg.webp');
+  background-size: cover;
+  background-position: center 30%;
+}
+
+#live {
+  background-image:
+    linear-gradient(rgba(13, 8, 4, 0.62), rgba(13, 8, 4, 0.62)),
+    url('../assets/img/live-bg.webp');
+  background-size: cover;
+  background-position: center top;
+}
+
+#photos {
+  background-image:
+    linear-gradient(rgba(13, 8, 4, 0.55), rgba(13, 8, 4, 0.55)),
+    url('../assets/img/photos-bg.webp');
+  background-size: cover;
+  background-position: center center;
+}
+/* END SECTION BACKGROUNDS */
+
 /* END LIVE SECTION */
 
 /* BIO SECTION */
