@@ -149,24 +149,24 @@ h5 {
   background-image:
     linear-gradient(rgba(13, 8, 4, 0.58), rgba(13, 8, 4, 0.58)),
     url('../assets/img/music-bg.webp');
-  background-size: 220%;
-  background-position: center 50%;
+  background-size: cover;
+  background-position: center 25%;
 }
 
 #live {
   background-image:
     linear-gradient(rgba(13, 8, 4, 0.62), rgba(13, 8, 4, 0.62)),
     url('../assets/img/live-bg.webp');
-  background-size: 170%;
-  background-position: center 18%;
+  background-size: cover;
+  background-position: center 70%;
 }
 
 #photos {
   background-image:
     linear-gradient(rgba(13, 8, 4, 0.55), rgba(13, 8, 4, 0.55)),
     url('../assets/img/photos-bg.webp');
-  background-size: 180%;
-  background-position: center 45%;
+  background-size: cover;
+  background-position: center 38%;
 }
 /* END SECTION BACKGROUNDS */
 
@@ -269,8 +269,8 @@ h5 {
   background-image:
     linear-gradient(rgba(13, 8, 4, 0.45), rgba(13, 8, 4, 0.6)),
     url('../assets/img/landing-hero.webp');
-  background-size: 180%;
-  background-position: center 22%;
+  background-size: cover;
+  background-position: center 55%;
   min-height: 70vh;
   display: flex;
   align-items: center;
