@@ -20,7 +20,7 @@ html {
 
 /* BEGIN NAV BAR */
 header {
-  height: 56px;
+  height: 0;
 }
 
 #mainNav {
