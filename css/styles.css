@@ -75,9 +75,7 @@ header {
 
 @media(max-width:767px) {
   .navbar-collapse {
-    background-color: rgba(20, 12, 6, 0.15) !important;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background-color: transparent !important;
     border-top: 1px solid rgba(250, 193, 19, 0.2);
     border-radius: 0 0 8px 8px;
     padding: 0.75rem 0.5rem;
