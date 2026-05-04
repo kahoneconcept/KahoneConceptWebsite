@@ -101,11 +101,13 @@ header {
   color: rgba(250, 193, 19, 0.85) !important;
   font-size: 1rem;
   letter-spacing: 0.06em;
+  display: inline-block;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .navbar-text:hover {
   color: #FAC113 !important;
-  transition: color 0.2s ease;
+  transform: scale(1.1);
 }
 
 /* END NAV BAR */
@@ -186,6 +188,14 @@ h5 {
   background-color: #FAC113;
   font-family: 'Stoke', serif;
   color: #7F491E;
+}
+
+.btn {
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
 }
 
 .bg-yellow {
