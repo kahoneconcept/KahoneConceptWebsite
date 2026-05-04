@@ -344,21 +344,21 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
                         <form id="form" action="https://formsubmit.co/kahoneconcept@gmail.com" method="POST">
                             <input type="hidden" name="_next" value="https://www.kahoneconcept.com?sent=1#contact">
                             <input type="hidden" name="_subject" value="New message from kahoneconcept.com">
+                            <!-- honeypot: bots fill this, humans don't; Formsubmit discards submissions where it's filled -->
+                            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
                             <div class="formControl form-floating mb-3">
-                                <!-- i put breaks to separate the lines -->
                                 <label for="fullName" class="w-75">Name<br>
                                     <input title="Name" type="text" placeholder="Enter your name..." id="fullName"
-                                        name="Name" class="form-control">
+                                        name="Name" class="form-control" required>
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                 </label>
                                 <small>Error Message</small>
                             </div>
                             <div class="formControl form-floating mb-3">
-                                <!-- i put breaks to separate the lines -->
                                 <label for="email" class="w-75">E-Mail<br>
                                     <input title="E-mail" type="email" placeholder="name@example.com" id="email"
-                                        name="Email" class="form-control">
+                                        name="Email" class="form-control" required>
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                 </label>
@@ -369,7 +369,7 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
                             <label for="message" class="w-75">Message<br>
                                 <textarea class="form-control" name="Message" title="Message" form="form"
                                     placeholder="Enter you message here..." id="message"
-                                    style="height: 10rem"></textarea>
+                                    style="height: 10rem" required></textarea>
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle "></i>
                             </label>
