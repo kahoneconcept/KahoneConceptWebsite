@@ -41,19 +41,24 @@ header {
   background-color: #FAC113;
   padding: 0.45rem 0.6rem;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggler-icon {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  cursor: pointer;
+  width: 22px;
 }
 
 .toggler-bar {
   display: block;
   width: 22px;
-  height: 2px;
+  height: 2.5px;
   background-color: #0d0804;
   border-radius: 2px;
   transition: transform 0.3s ease, opacity 0.2s ease;
+  flex-shrink: 0;
 }
 
 .navbar-toggler[aria-expanded="true"] .toggler-bar:nth-child(1) {
