@@ -36,6 +36,12 @@ header {
   border-bottom: 1px solid rgba(250, 193, 19, 0.2);
 }
 
+#mainNav.menu-open {
+  background-color: rgba(20, 12, 6, 0.25) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
 .navbar-toggler {
   border: none;
   background-color: #FAC113;

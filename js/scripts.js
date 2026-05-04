@@ -4,6 +4,13 @@ $(function () {
         var $nav = $("#mainNav");
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
+
+    // lighten navbar when mobile menu is open
+    $('#navbarToggle').on('show.bs.collapse', function () {
+        $('#mainNav').addClass('menu-open');
+    }).on('hidden.bs.collapse', function () {
+        $('#mainNav').removeClass('menu-open');
+    });
 });
 
 
