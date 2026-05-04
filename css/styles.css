@@ -25,6 +25,8 @@ header {
 
 #mainNav {
   background-color: transparent;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
   transition: background-color 0.35s ease, backdrop-filter 0.35s ease, border-bottom 0.35s ease;
   border-bottom: 1px solid transparent;
 }
@@ -38,8 +40,9 @@ header {
 
 #mainNav.menu-open {
   background-color: rgba(20, 12, 6, 0.25) !important;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(250, 193, 19, 0.2);
 }
 
 .navbar-toggler {
