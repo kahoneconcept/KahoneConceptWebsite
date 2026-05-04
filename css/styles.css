@@ -39,12 +39,33 @@ header {
 .navbar-toggler {
   border: none;
   background-color: #FAC113;
-  padding: 0.3rem 0.6rem;
+  padding: 0.45rem 0.6rem;
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
 }
 
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(13,8,4,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.toggler-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #0d0804;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.navbar-toggler[aria-expanded="true"] .toggler-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .toggler-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .toggler-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 @media(max-width:767px) {
