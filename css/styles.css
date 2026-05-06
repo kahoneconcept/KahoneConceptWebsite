@@ -20,6 +20,7 @@ Author: Benjamin Orrvick  */
 /* when menu is click there is nice scroll effect */
 html {
   scroll-behavior: smooth;
+  background-color: #0d0804;
 }
 
 /* BEGIN NAV BAR */
@@ -332,6 +333,8 @@ h5 {
   min-height: 70vh;
   display: flex;
   align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* END LANDING SECTION */
