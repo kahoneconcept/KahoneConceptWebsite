@@ -286,6 +286,13 @@
             <span class="link-title">WYEP Summer Music Festival</span>
         </a>
 
+        <!-- Disco Dynomite Playlist -->
+        <a href="https://open.spotify.com/playlist/1Le3cxYIMVme5SSbSajZmR?si=24c3b7b46d064f7e" target="_blank" rel="noopener noreferrer"
+           class="link-btn link-btn-outline" id="link-disco-playlist">
+            <span class="link-label">Spotify Playlist</span>
+            <span class="link-title">Kahone's Disco Dynomite</span>
+        </a>
+
         <!-- Social Media -->
         <a href="/links-socials" class="link-btn link-btn-outline" id="link-socials">
             <span class="link-label">Stay Connected</span>
@@ -358,6 +365,12 @@
         document.getElementById('link-show').addEventListener('click', function () {
             fbEvent('ViewContent', { content_name: 'WYEP Summer Music Festival', content_category: 'Event' });
             gaEvent('select_content', { content_type: 'show', content_id: 'wyep-summer-2026' });
+        });
+
+        // Disco Dynomite Playlist
+        document.getElementById('link-disco-playlist').addEventListener('click', function () {
+            fbEvent('ViewContent', { content_name: "Kahone's Disco Dynomite", content_category: 'Playlist' });
+            gaEvent('select_content', { content_type: 'playlist', content_id: 'disco-dynomite' });
         });
 
         // Social Media sub-page
