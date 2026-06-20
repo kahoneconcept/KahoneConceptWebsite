@@ -95,7 +95,7 @@
             object-fit: cover;
             object-position: center center;
             border-radius: 50%;
-            border: 3px solid #254F22;
+            border: 3px solid #FAC113;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             margin-bottom: 0.75rem;
         }
@@ -116,8 +116,8 @@
             border-radius: 50px;
             text-align: center;
             text-decoration: none;
-            border: 2px solid #254F22;
-            transition: background-color 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+            border: 2px solid #FAC113;
+            transition: background-color 0.15s ease, box-shadow 0.15s ease;
             cursor: pointer;
             background: none;
             font-family: 'Calistoga', cursive;
@@ -126,7 +126,7 @@
         }
 
         .link-btn:focus-visible {
-            outline: 2px solid #6EB062;
+            outline: 2px solid #FAC113;
             outline-offset: 3px;
         }
 
@@ -137,34 +137,32 @@
         @media (hover: hover) {
             .link-btn:hover {
                 transform: translateY(-2px);
-                box-shadow: 0 6px 20px rgba(37, 79, 34, 0.35);
+                box-shadow: 0 6px 20px rgba(250, 193, 19, 0.25);
                 text-decoration: none;
             }
         }
 
         .link-btn-primary {
-            background: linear-gradient(135deg, #d8d8d8 0%, #f4f4f4 20%, #9a9a9a 45%, #e8e8e8 65%, #b0b0b0 85%, #f0f0f0 100%);
-            border-color: #254F22;
-            color: #173015;
+            background-color: #FAC113;
+            color: #0d0804;
         }
 
         .link-btn-primary:hover, .link-btn-primary:focus-visible {
-            filter: brightness(1.08);
-            border-color: #AB4830;
-            color: #173015;
+            background-color: #e6ad10;
+            color: #0d0804;
         }
 
         .link-btn-primary:active {
-            filter: brightness(0.92);
+            background-color: #c99a0e;
         }
 
         .link-btn-outline {
             background-color: transparent;
-            color: #6EB062;
+            color: #FAC113;
         }
 
         .link-btn-outline:active {
-            background-color: rgba(110, 176, 98, 0.15);
+            background-color: rgba(250, 193, 19, 0.15);
         }
 
         .link-label {
@@ -190,9 +188,9 @@
             flex-direction: column;
             gap: 0.5rem;
             padding: 1rem 1.25rem;
-            border: 2px solid #254F22;
+            border: 2px solid #FAC113;
             border-radius: 16px;
-            background: rgba(171, 72, 48, 0.2);
+            background: rgba(127, 73, 30, 0.2);
             margin-top: -0.25rem;
         }
 
@@ -204,7 +202,7 @@
             width: 100%;
             padding: 0.65rem 1rem;
             border-radius: 50px;
-            border: 2px solid rgba(110, 176, 98, 0.5);
+            border: 2px solid rgba(250, 193, 19, 0.5);
             background: rgba(255, 255, 255, 0.06);
             color: #fff;
             font-family: 'Stoke', serif;
@@ -219,7 +217,7 @@
         }
 
         .mailing-expand input[type="email"]:focus {
-            border-color: #6EB062;
+            border-color: #FAC113;
             background: rgba(255, 255, 255, 0.1);
         }
 
@@ -228,8 +226,8 @@
             padding: 0.65rem;
             border-radius: 50px;
             border: none;
-            background-color: #254F22;
-            color: #EEE0CC;
+            background-color: #FAC113;
+            color: #0d0804;
             font-family: 'Calistoga', cursive;
             font-size: 0.95rem;
             text-transform: uppercase;
@@ -239,7 +237,7 @@
         }
 
         .mailing-expand button:hover {
-            background-color: #2f6029;
+            background-color: #e6ad10;
         }
 
         .links-footer {
@@ -270,7 +268,7 @@
         </picture>
 
         <a href="/" aria-label="Kahone Concept Home">
-            <img src="/assets/img/KC_Logo_E.svg" alt="Kahone Concept" class="links-logo" />
+            <img src="/assets/img/KC_Logo_Large_Yellow.svg" alt="Kahone Concept" class="links-logo" />
         </a>
 
         <!-- Music -->
