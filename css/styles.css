@@ -5,6 +5,14 @@ Website: Kahone Concept
 Date: 2022
 Author: Benjamin Orrvick  */
 
+:root {
+  --color-green: #254F22;
+  --color-green-bright: #6EB062;
+  --color-rust: #AB4830;
+  --color-cream: #EEE0CC;
+  --chrome-gradient: linear-gradient(135deg, #d8d8d8 0%, #f4f4f4 20%, #9a9a9a 45%, #e8e8e8 65%, #b0b0b0 85%, #f0f0f0 100%);
+}
+
 
 /* used for testing  */
 /* * {
@@ -39,19 +47,19 @@ header {
   background-color: rgba(20, 12, 6, 0.55) !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(250, 193, 19, 0.2);
+  border-bottom: 1px solid rgba(37, 79, 34, 0.35);
 }
 
 #mainNav:has(.navbar-collapse.show) {
   background-color: rgba(20, 12, 6, 0.25) !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(250, 193, 19, 0.2);
+  border-bottom: 1px solid rgba(37, 79, 34, 0.35);
 }
 
 .navbar-toggler {
   border: none;
-  background-color: #FAC113;
+  background-color: var(--color-green);
   padding: 0.45rem 0.6rem;
   border-radius: 4px;
   cursor: pointer;
@@ -68,7 +76,7 @@ header {
   display: block;
   width: 22px;
   height: 2.5px;
-  background-color: #0d0804;
+  background-color: var(--color-cream);
   border-radius: 2px;
   transition: transform 0.3s ease, opacity 0.2s ease;
   flex-shrink: 0;
@@ -89,7 +97,7 @@ header {
 @media(max-width:767px) {
   .navbar-collapse {
     background-color: transparent !important;
-    border-top: 1px solid rgba(250, 193, 19, 0.2);
+    border-top: 1px solid rgba(37, 79, 34, 0.35);
     border-radius: 0 0 8px 8px;
     padding: 0.75rem 0.5rem;
     margin-top: 2px;
@@ -99,7 +107,7 @@ header {
 .navbar-text {
   font-family: 'Calistoga', cursive;
   text-transform: uppercase;
-  color: rgba(250, 193, 19, 0.85) !important;
+  color: rgba(238, 224, 204, 0.85) !important;
   font-size: 1rem;
   letter-spacing: 0.06em;
   display: inline-block;
@@ -107,7 +115,7 @@ header {
 }
 
 .navbar-text:hover {
-  color: #FAC113 !important;
+  color: var(--color-green-bright) !important;
   transform: scale(1.1);
 }
 
@@ -134,7 +142,7 @@ body::before {
 
 .small-text {
   font-family: 'Stoke', serif;
-  color: #e8c9a0;
+  color: var(--color-cream);
   letter-spacing: 0.03em;
 }
 
@@ -160,11 +168,11 @@ img.img-fluid:hover {
 .live>h3,
 .live>h4,
 .sub-heading {
-  color: #b8d3ed !important;
+  color: var(--color-cream) !important;
 }
 
 .live>p {
-  color: #e8c9a0 !important;
+  color: var(--color-cream) !important;
   font-family: 'Stoke', serif;
   letter-spacing: 0.04em;
 }
@@ -180,15 +188,16 @@ h3,
 h4,
 h5 {
   font-family: 'Calistoga', cursive;
-  color: #FAC113 !important;
+  color: var(--color-green-bright) !important;
   letter-spacing: 0.05em;
-  text-shadow: 0 2px 12px rgba(250, 193, 19, 0.25);
+  text-shadow: 0 2px 12px rgba(110, 176, 98, 0.25);
 }
 
 .button-custom {
-  background-color: #FAC113;
+  background: var(--chrome-gradient);
+  border: 2px solid var(--color-green);
   font-family: 'Stoke', serif;
-  color: #7F491E;
+  color: #173015;
 }
 
 .btn {
@@ -200,7 +209,7 @@ h5 {
 }
 
 .bg-yellow {
-  background-color: #FAC113;
+  background-color: var(--color-green);
 }
 
 /* SECTION BACKGROUNDS */
@@ -244,7 +253,7 @@ h5 {
   width: 100vw;
   min-height: 60em;
   padding-bottom: 4em;
-  color: #b8d3ed;
+  color: var(--color-cream);
   position: relative;
 }
 
@@ -265,7 +274,7 @@ h5 {
 
 .bio-text {
   font-family: 'Stoke', serif;
-  color: #e8c9a0;
+  color: var(--color-cream);
   font-size: 1.05rem;
   line-height: 1.85;
   letter-spacing: 0.02em;
@@ -284,7 +293,7 @@ h5 {
 #landing>div>h3 {
   font-family: 'Calistoga', cursive;
   font-size: 2em;
-  color: #b8d3ed !important;
+  color: var(--color-cream) !important;
 }
 
 /* spin logo */
@@ -352,7 +361,7 @@ h5 {
   width: 100%;
   max-width: 7rem;
   height: 0.25rem;
-  background-color: #FAC113;
+  background: var(--chrome-gradient);
   border-radius: 1rem;
 }
 
@@ -362,12 +371,12 @@ h5 {
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #7f4a1ea2;
+  background-color: rgba(171, 72, 48, 0.64);
   color: #fff;
 }
 
 .copyright {
-  background-color: #7f4a1ece;
+  background-color: rgba(171, 72, 48, 0.81);
 }
 
 /* END FOOTER SECTION */
@@ -385,7 +394,7 @@ h5 {
   width: 100vw;
   min-height: 60em;
   padding-bottom: 4em;
-  color: #b8d3ed;
+  color: var(--color-cream);
   position: relative;
 }
 
@@ -457,30 +466,30 @@ h5 {
 
 /* MAILING LIST MODAL */
 .mailing-modal-content {
-  background-color: #7f4a1e;
-  border: 2px solid #FAC113;
+  background-color: var(--color-rust);
+  border: 2px solid var(--color-green-bright);
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
 }
 
 .mailing-modal-content .modal-title {
-  color: #FAC113 !important;
+  color: var(--color-green-bright) !important;
 }
 
 .mailing-modal-close {
-  color: #FAC113;
+  color: var(--color-green-bright);
   opacity: 1;
 }
 
 .mailing-modal-sub {
-  color: #b8d3ed;
+  color: var(--color-cream);
   font-family: 'Stoke', serif;
   font-size: 0.9rem;
 }
 
 .mailing-modal-input {
   background: rgba(255, 255, 255, 0.1);
-  border: 2px solid #FAC113;
+  border: 2px solid var(--color-green-bright);
   border-radius: 8px;
   color: #fff;
   text-align: center;
@@ -493,18 +502,18 @@ h5 {
 .mailing-modal-input:focus {
   background: rgba(255, 255, 255, 0.15);
   color: #fff;
-  border-color: #FAC113;
-  box-shadow: 0 0 0 0.2rem rgba(250, 193, 19, 0.35);
+  border-color: var(--color-green-bright);
+  box-shadow: 0 0 0 0.2rem rgba(110, 176, 98, 0.35);
   outline: none;
 }
 /* END MAILING LIST MODAL */
 
 /* CONTACT FORM SUCCESS */
 #form-success {
-  background-color: rgba(127, 73, 30, 0.4);
-  border: 1px solid #FAC113;
+  background-color: rgba(171, 72, 48, 0.4);
+  border: 1px solid var(--color-green-bright);
   border-radius: 8px;
-  color: #FAC113;
+  color: var(--color-green-bright);
   font-family: 'Stoke', serif;
   margin-bottom: 1.5rem;
 }
