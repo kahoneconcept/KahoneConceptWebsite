@@ -111,13 +111,13 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
         },
         {
           "@type": "Event",
-          "name": "WYEP Summer Music Festival",
-          "startDate": "2026-06-27T16:00",
+          "name": "Pittsburgh's 4th of July Independence Day Celebration",
+          "startDate": "2026-07-04T16:00",
           "eventStatus": "https://schema.org/EventScheduled",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "location": {
             "@type": "Place",
-            "name": "WYEP Summer Music Festival",
+            "name": "Downtown Pittsburgh",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Pittsburgh",
@@ -126,11 +126,35 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
             }
           },
           "performer": { "@id": "https://www.kahoneconcept.com/#artist" },
-          "url": "https://www.wyep.org/wyep-programming/2026-05-01/summer-music-festival-michgander-ratboys",
+          "url": "https://www.pittsburghpa.gov/Recreation-Events/Special-Events/Pittsburghs-4th-of-July-2026/Independence-Day-Celebration",
           "organizer": {
             "@type": "Organization",
-            "name": "WYEP",
-            "url": "https://www.wyep.org"
+            "name": "City of Pittsburgh",
+            "url": "https://www.pittsburghpa.gov"
+          }
+        },
+        {
+          "@type": "Event",
+          "name": "Northside Music Festival",
+          "startDate": "2026-07-11T20:35",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": {
+            "@type": "Place",
+            "name": "Northside Music Festival",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Pittsburgh",
+              "addressRegion": "PA",
+              "addressCountry": "US"
+            }
+          },
+          "performer": { "@id": "https://www.kahoneconcept.com/#artist" },
+          "url": "https://www.northsidemusicfestival.com/artist/kahone-concept.html",
+          "organizer": {
+            "@type": "Organization",
+            "name": "Northside Music Festival",
+            "url": "https://www.northsidemusicfestival.com"
           }
         }
       ]
@@ -148,7 +172,7 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
         <nav class="navbar navbar-expand-md navbar-light fixed-top p-1" id="mainNav">
             <div class="container">
                 <!-- Navbar Left Side -->
-                <a href="#page-top"><img src="assets/img/KC_Logo_Large_Yellow.svg" alt="Kahone Concept" height="46" /></a>
+                <a href="#page-top"><img src="assets/img/KC_Logo_E.svg" alt="Kahone Concept" height="46" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
                     aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <div class="toggler-icon">
@@ -176,7 +200,7 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
     <!-- LANDING SECTION-->
     <section class="custom-section" id="landing">
         <div class="container text-center">
-            <a href="#page-top"><img src="assets/img/KC_Logo_Large_Yellow.svg" alt="Kahone Concept" class="mainLogo img-fluid" /></a>
+            <a href="#page-top"><img src="assets/img/KC_Logo_E.svg" alt="Kahone Concept" class="mainLogo img-fluid" /></a>
         </div>
     </section>
     <!-- END LANDING -->
@@ -220,10 +244,16 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
                 </div>
                 <!-- Live Section Content-->
                 <div class="live text-center">
-                    <h3 class="mt-5">June 27, 2026</h3>
-                    <h4>4:00 PM &mdash; WYEP Summer Music Festival</h4>
+                    <h3 class="mt-5">July 4, 2026</h3>
+                    <h4>4:00 PM &mdash; Pittsburgh's 4th of July City Event</h4>
+                    <p>Downtown Pittsburgh, PA</p>
+                    <a href="https://www.pittsburghpa.gov/Recreation-Events/Special-Events/Pittsburghs-4th-of-July-2026/Independence-Day-Celebration" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light mt-2">More Info</a>
+                </div>
+                <div class="live text-center">
+                    <h3 class="mt-5">July 11, 2026</h3>
+                    <h4>8:35 PM &mdash; Northside Music Festival</h4>
                     <p>Pittsburgh, PA</p>
-                    <a href="https://www.wyep.org/wyep-programming/2026-05-01/summer-music-festival-michgander-ratboys" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light mt-2">More Info</a>
+                    <a href="https://www.northsidemusicfestival.com/artist/kahone-concept.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light mt-2">More Info</a>
                 </div>
             </div>
         </section>
@@ -510,12 +540,21 @@ src="https://www.facebook.com/tr?id=764107772402527&ev=PageView&noscript=1"
             });
         });
 
-        // WYEP Summer Music Festival — More Info
-        document.querySelectorAll('a[href*="wyep.org"]').forEach(function (el) {
+        // Pittsburgh 4th of July City Event — More Info
+        document.querySelectorAll('a[href*="pittsburghpa.gov"]').forEach(function (el) {
             el.addEventListener('click', function () {
-                fbEvent('ViewContent', { content_name: 'WYEP Summer Music Festival', content_category: 'Event' });
-                gaEvent('select_content', { content_type: 'show', content_id: 'wyep-summer-2026' });
-                ttEvent('ViewContent', { content_name: 'WYEP Summer Music Festival', content_type: 'event' });
+                fbEvent('ViewContent', { content_name: 'Pittsburgh 4th of July City Event', content_category: 'Event' });
+                gaEvent('select_content', { content_type: 'show', content_id: 'pittsburgh-july4-2026' });
+                ttEvent('ViewContent', { content_name: 'Pittsburgh 4th of July City Event', content_type: 'event' });
+            });
+        });
+
+        // Northside Music Festival — More Info
+        document.querySelectorAll('a[href*="northsidemusicfestival.com"]').forEach(function (el) {
+            el.addEventListener('click', function () {
+                fbEvent('ViewContent', { content_name: 'Northside Music Festival', content_category: 'Event' });
+                gaEvent('select_content', { content_type: 'show', content_id: 'northside-music-festival-2026' });
+                ttEvent('ViewContent', { content_name: 'Northside Music Festival', content_type: 'event' });
             });
         });
 

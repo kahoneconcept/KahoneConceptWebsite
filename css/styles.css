@@ -289,10 +289,13 @@ h5 {
 
 /* spin logo */
 
+#landing .container {
+  max-width: 1700px;
+}
+
 .mainLogo {
-  /* margin:auto; */
-  height: 14em;
-  width: 100%;
+  width: 90%;
+  height: auto;
 }
 
 /* .mainLogo:hover {
