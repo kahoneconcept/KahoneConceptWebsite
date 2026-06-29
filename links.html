@@ -278,12 +278,20 @@
             <span class="link-title">Music</span>
         </a>
 
-        <!-- Live Show -->
-        <a href="https://www.wyep.org/wyep-programming/2026-05-01/summer-music-festival-michgander-ratboys"
+        <!-- Live Show 1 -->
+        <a href="https://www.pittsburghpa.gov/Recreation-Events/Special-Events/Pittsburghs-4th-of-July-2026/Independence-Day-Celebration"
            target="_blank" rel="noopener noreferrer"
-           class="link-btn link-btn-outline" id="link-show">
-            <span class="link-label">Live &mdash; Jun 27, 2026 &middot; 4:00 PM</span>
-            <span class="link-title">WYEP Summer Music Festival</span>
+           class="link-btn link-btn-outline" id="link-show-july4">
+            <span class="link-label">Live &mdash; Jul 4, 2026 &middot; 4:00 PM</span>
+            <span class="link-title">Pittsburgh's 4th of July City Event</span>
+        </a>
+
+        <!-- Live Show 2 -->
+        <a href="https://www.northsidemusicfestival.com/artist/kahone-concept.html"
+           target="_blank" rel="noopener noreferrer"
+           class="link-btn link-btn-outline" id="link-show-northside">
+            <span class="link-label">Live &mdash; Jul 11, 2026 &middot; 8:35 PM</span>
+            <span class="link-title">Northside Music Festival</span>
         </a>
 
         <!-- Disco Dynomite Playlist -->
@@ -361,10 +369,16 @@
             gaEvent('select_content', { content_type: 'music', content_id: 'the-greatest-hits' });
         });
 
-        // Live Show
-        document.getElementById('link-show').addEventListener('click', function () {
-            fbEvent('ViewContent', { content_name: 'WYEP Summer Music Festival', content_category: 'Event' });
-            gaEvent('select_content', { content_type: 'show', content_id: 'wyep-summer-2026' });
+        // Live Show — July 4th
+        document.getElementById('link-show-july4').addEventListener('click', function () {
+            fbEvent('ViewContent', { content_name: 'Pittsburgh 4th of July City Event', content_category: 'Event' });
+            gaEvent('select_content', { content_type: 'show', content_id: 'pittsburgh-july4-2026' });
+        });
+
+        // Live Show — Northside Music Festival
+        document.getElementById('link-show-northside').addEventListener('click', function () {
+            fbEvent('ViewContent', { content_name: 'Northside Music Festival', content_category: 'Event' });
+            gaEvent('select_content', { content_type: 'show', content_id: 'northside-music-festival-2026' });
         });
 
         // Disco Dynomite Playlist
